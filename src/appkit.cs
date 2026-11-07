@@ -16629,7 +16629,7 @@ namespace MonoMac.AppKit {
 		[Export ("launchApplication:showIcon:autolaunch:")]
 		bool LaunchApplication (string appName, bool showIcon, bool autolaunch);
 		
-		[Export ("fullPathForApplication:")]
+		[Export ("fullPathForApplication:"), ThreadSafe]
 		string FullPathForApplication (string appName);
 		
 		[Export ("selectFile:inFileViewerRootedAtPath:")]
@@ -16698,7 +16698,7 @@ namespace MonoMac.AppKit {
 		[Export ("mountedRemovableMedia")]
 		string[] MountedRemovableMedia {  get; }
 		
-		[Export ("URLForApplicationWithBundleIdentifier:")]
+		[Export ("URLForApplicationWithBundleIdentifier:"), ThreadSafe]
 		NSUrl UrlForApplication (string bundleIdentifier );
 		
 		[Export ("URLForApplicationToOpenURL:")]
