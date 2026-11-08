@@ -10175,30 +10175,38 @@ namespace MonoMac.AppKit {
 
 	[BaseType (typeof (NSObject))]
 	public partial interface NSScreen {
+		[ThreadSafe]
 		[Static]
 		[Export ("screens")]
 		NSScreen [] Screens { get; }
 
+		[ThreadSafe]
 		[Static]
 		[Export ("mainScreen")]
 		NSScreen MainScreen { get; }
 
+		[ThreadSafe]
 		[Static]
 		[Export ("deepestScreen")]
 		NSScreen DeepestScreen { get; }
 
+		[ThreadSafe]
 		[Export ("depth")]
 		NSWindowDepth Depth { get; }
 
+		[ThreadSafe]
 		[Export ("frame")]
 		CGRect Frame { get; }
 
+		[ThreadSafe]
 		[Export ("visibleFrame")]
 		CGRect VisibleFrame { get; }
 
+		[ThreadSafe]
 		[Export ("deviceDescription")]
 		NSDictionary DeviceDescription { get; }
 
+		[ThreadSafe]
 		[Export ("colorSpace")]
 		NSColorSpace ColorSpace { get; }
 
@@ -10217,9 +10225,11 @@ namespace MonoMac.AppKit {
 		[Lion, Export ("backingAlignedRect:options:")]
 		CGRect GetBackingAlignedRect (CGRect globalScreenCoordRect, NSAlignmentOptions options);
 
+		[ThreadSafe]
 		[Lion, Export ("backingScaleFactor")]
 		nfloat BackingScaleFactor { get; }
 
+		[ThreadSafe]
 		[Mavericks, Static]
 		[Export ("screensHaveSeparateSpaces")]
 		bool ScreensHaveSeparateSpaces ();
